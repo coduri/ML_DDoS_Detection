@@ -1,15 +1,43 @@
-# DDoS attacks detection and characterization
+# DDoS Attacks Detection and Characterization
+Internet security is one of the most important challenges, especially when the demand for
+IT services is increasing every day. Among the many existing threats, DDoS (Distributed
+Denial of Service) attack is a relatively simple but very effective technique to attack intranet
+and Internet resources. Typically, this attack uses a large number of compromised machines
+to prevent legitimate users from using web-based services. DDoS attacks can be carried out
+at the network, transport and application layers using various protocols such as TCP, UDP,
+ICMP, and HTTP.
 
+By assuming that different DDoS attacks exhibit different traffic patterns, researchers
+focused on the application of ML algorithms to detect and characterized such patters.
+Indeed, the automatic detection of DDoS attacks can ease the network monitoring activity of
+network administrators and allow to quickly take countermeasures.
+The goal of this project is to develop a complete Machine Learning pipeline to automatize
+the detection and analysis of flows generated during DDoS attacks solving two tasks: (i) one
+supervised task, i.e., classification and (ii) one unsupervised task i.e., clustering. Through the
+analysis of the results coming from the two tasks you should be able to identify and
+characterize flows generated during a specific DDoS attack understanding, when possible,
+the attack behaviors.
+
+## Dataset
+The provided dataset contains benign and the most recent common DDoS attacks that
+resemble the real world data. It also includes the results of network traffic analysis using
+CICFlowMeter-V3 (https://www.unb.ca/cic/research/applications.html#CICFlowMeter) with
+labeled flows-based on timestamps, source and destination IPs, source and destination
+ports, protocols and attacks. The dataset has been built replicating the behaviour of 25 users
+based on the HTTP, HTTPS, FTP, SSH and email protocols.
+In this dataset, you have different modern reflective DDoS attacks such as NetBIOS, LDAP,
+MSSQL, UDP, UDP-Lag, SYN, NTP, DNS and SNMP. Attacks were subsequently executed
+during the data acquisition period period.
+The ground truth (GT) is made of the name of the attack a considered flow is referred to.
 The provided dataset contains traffic traces collected during the execution of some of the most common DDoS attacks.
 
 Each row is referred to a flow (sequence of packets exchanged between a source and a destination IP).
 
-# Labels
+### Labels
 The provided dataset is classified in 12 labels. 11 related to DDoS attacks (e.g., `ddos_ldap`, `ddos_udp`, ...).
 The last one is `benign` and specifies that the labelled flow does not belong to any attack.
 
-# Features Description
-
+### Features Description
 -   Flow ID: a unique identifier for each flow of network traffic in the dataset
 -   Source IP: the IP address of the device or host that is sending the traffic
 -   Source Port: the port number on the source device used for sending the traffic
