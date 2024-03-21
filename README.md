@@ -123,3 +123,5 @@ The last one is `benign` and specifies that the labelled flow does not belong to
 -   'Idle Min': The minimum value of the idle time of a network communication. The idle time is the amount of time that the communication is not actively transferring data.
 -   'SimillarHTTP': A measure of the similarity of the network communication to the HTTP protocol. HTTP (Hypertext Transfer Protocol) is a widely-used protocol for transmitting data over the internet, particularly for web browsing.
 -   'Inbound': A binary value indicating whether the network communication is inbound (1) or outbound (0). An inbound communication is one that is directed towards the device, while an outbound communication is one that is initiated by the device.
+
+> Written by Pietro Armenante, Christian Coduri, Eliana De Giuseppe and Luca Serafini.
